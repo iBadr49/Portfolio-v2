@@ -1,19 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
 
 html {
     background-color: var(--Errical-white);
-    color: var(--Boiling-magma);
-	font-family: 'Mulish', sans-serif;
-    line-height: 1.6;
+    font-family: "Jockey One", sans-serif;
+    font-style: normal;    
+    line-height: 1.5;
 }
 
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+
 }
+
 
 :root{
     --Errical-white: #f2f2f2;
-    --Boiling-magma: #ff3409;
+    --Boiling-magma: #EC4B3C;
+    --Tea-green: #9DCDC0;
 }
+
