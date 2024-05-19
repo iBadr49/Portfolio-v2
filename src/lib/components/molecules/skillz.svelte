@@ -1,0 +1,127 @@
+<script>
+  // Experience data
+  const experienceData = [
+    {
+      title: "Frontend Development",
+      skills: [
+        { name: "HTML", level: "Experienced" },
+        { name: "CSS", level: "Experienced" },
+        { name: "JavaScript", level: "Basic" },
+        { name: "Sveltekit", level: "Experienced" },
+        { name: "Nuxt", level: "Basic" },
+      ],
+    },
+    {
+      title: "Backend Development",
+      skills: [
+        { name: "Node JS", level: "Basic" },
+        { name: "Express", level: "Basic" },
+        { name: "GraphQL (Hygraph/Prismic)", level: "Intermediate" },
+      ],
+    },
+  ];
+</script>
+
+<section>
+  <h2 class="main-title">Experience</h2>
+  <div class="experience-container">
+    <div class="experiences">
+      {#each experienceData as experience}
+        <div class="experience">
+          <h3 class="subtitle">{experience.title}</h3>
+          <div class="skills-container">
+            {#each experience.skills as skill}
+              <div class="skill">
+                <img
+                  src="images/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>{skill.name}</h3>
+                  <p>{skill.level}</p>
+                </div>
+              </div>
+            {/each}
+          </div>
+        </div>
+      {/each}
+    </div>
+    <div class="image-container">
+      <img src="images/file.png" alt="" />
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    padding: 20px;
+  }
+
+  .main-title {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .main-title {
+    text-decoration: underline var(--Tea-green);
+  }
+
+  .icon {
+    height: 2rem;
+    cursor: default;
+  }
+
+  .experience {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 2rem;
+    border: 0.1rem solid rgb(163, 163, 163);
+  }
+
+  .subtitle {
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .experience-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .experiences {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+  }
+
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: space-around;
+  }
+
+  .skill {
+    display: flex;
+    width: 10rem;
+    gap: 0.2rem;
+  }
+
+  .image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
