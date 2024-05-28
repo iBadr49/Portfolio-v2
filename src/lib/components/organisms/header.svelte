@@ -1,8 +1,9 @@
 <script>
+  import Logo from "$lib/components/atoms/logo.svelte";
 </script>
 
 <header>
-  <h1>Badev.</h1>
+  <Logo />
 
   <nav>
     <ul>
@@ -18,11 +19,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 0 13px 0 13px;
     text-transform: uppercase;
     font-size: larger;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); 
-
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    /* position: sticky; 
+    top: 0;  */
+    background-color: var(--Errical-white);
+    z-index: 10; 
   }
 
   nav ul {
@@ -36,18 +40,22 @@
     padding: 10px;
   }
 
+  nav ul li a {
+    text-decoration: none;
+    color: black;
+  }
+
   .last-item {
     text-decoration: none;
 
-    padding: 5px 5px;
-    margin-right: 10px;
+   
     color: black;
     text-transform: uppercase;
 
     padding: 0.5rem 0.75rem;
-    border: 1px solid var(--Boiling-magma);
+    border: 1px solid var(--Tea-green);
     border-radius: 0.5rem;
-    box-shadow: -2px 2px 0 0 var(--Boiling-magma);
+    box-shadow: -2px 2px 0 0 var(--Tea-green);
     transition: 0.4s ease-out;
     cursor: pointer;
     &:disabled {
@@ -55,13 +63,8 @@
     }
     &:hover {
       transform: translate(-1px 1px);
-      box-shadow: -1px 1px 0 0 var(--Boiling-magma);
-      color: var(--Tea-green);
+      box-shadow: -1px 1px 0 0 var(--Tea-green);
+      /* color: var(--Tea-green); */
     }
-  }
-
-  nav ul li a {
-    text-decoration: none;
-    color: black;
   }
 </style>
