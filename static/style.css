@@ -15,6 +15,11 @@ html {
 
 }
 
+p {
+    font-family: "Jockey One", san-serif;
+    font-size: 20px ;
+}
+
 
 :root{
     --Errical-white: #f2f2f2;
