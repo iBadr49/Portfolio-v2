@@ -4,7 +4,7 @@
   import About from "$lib/components/molecules/about.svelte";
   import Skillz from "$lib/components/molecules/skillz.svelte";
   import Projects from "$lib/components/organisms/projects.svelte";
-
+  import Formulier from "../lib/components/molecules/formulier.svelte";
 </script>
 
 <Introduction />
@@ -16,3 +16,5 @@
 <Skillz />
 
 <Projects />
+
+<Formulier />
