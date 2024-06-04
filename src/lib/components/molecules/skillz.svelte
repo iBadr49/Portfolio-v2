@@ -1,4 +1,6 @@
 <script>
+  import IconCheckmark from "../atoms/icons/iconCheckmark.svelte";
+
   // Experience data
   const experienceData = [
     {
@@ -17,13 +19,14 @@
         { name: "Node JS", level: "Basic" },
         { name: "Express", level: "Basic" },
         { name: "GraphQL (Hygraph/Prismic)", level: "Intermediate" },
+        { name: "Api's", level: "Intermediate" },
       ],
     },
   ];
 </script>
 
 <section>
-  <h2 class="main-title">Experience</h2>
+  <h2 class="main-title">Skills</h2>
   <div class="experience-container">
     <div class="experiences">
       {#each experienceData as experience}
@@ -32,11 +35,7 @@
           <div class="skills-container">
             {#each experience.skills as skill}
               <div class="skill">
-                <img
-                  src="images/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <IconCheckmark />
                 <div>
                   <h3>{skill.name}</h3>
                   <p>{skill.level}</p>
@@ -47,9 +46,9 @@
         </div>
       {/each}
     </div>
-    <div class="image-container">
+    <!-- <div class="image-container">
       <img src="images/file.png" alt="" />
-    </div>
+    </div> -->
   </div>
 </section>
 
@@ -61,15 +60,11 @@
   .main-title {
     font-size: 3rem;
     margin-bottom: 1.5rem;
+    color: var(--Boiling-magma);
   }
 
   .main-title {
     text-decoration: underline var(--Tea-green);
-  }
-
-  .icon {
-    height: 2rem;
-    cursor: default;
   }
 
   .experience {
@@ -77,7 +72,12 @@
     padding: 1.5rem;
     background: white;
     border-radius: 2rem;
-    border: 0.1rem solid rgb(163, 163, 163);
+    /* border: 2px solid var(--Tea-green); */
+    /* box-shadow: 0 1px 2px rgb(163, 163, 163); */
+    box-shadow: 0 25px 50px -12px hsla(265.3, 20%, 10%, 35%);
+    max-width: 50%;
+
+    /* border: 0.1rem solid rgb(163, 163, 163);  */
   }
 
   .subtitle {
@@ -95,7 +95,8 @@
 
   .experiences {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    justify-content: center;
     gap: 20px;
     flex: 1;
   }
@@ -103,8 +104,8 @@
   .skills-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 2.5rem;
-    justify-content: space-around;
+    gap: 1.5rem;
+    /* justify-content: space-around; */
   }
 
   .skill {
@@ -113,7 +114,7 @@
     gap: 0.2rem;
   }
 
-  .image-container {
+  /* .image-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -123,5 +124,17 @@
   .image-container img {
     max-width: 100%;
     height: auto;
+  } */
+
+  @media (max-width: 686px) {
+    .experiences {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .experience {
+      max-width: 100%;
+    }
+  
   }
 </style>
