@@ -82,5 +82,123 @@
 </section>
 
 <style>
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--Boiling-magma);
+    padding-left: 20px;
+    text-decoration: underline var(--Tea-green);
+  }
 
+  section {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  /* Section Styling */
+  form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+
+  /* Form Styling */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Wrapper for Form Elements */
+  .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+  }
+
+  /* Labels */
+  .form-label {
+    font-size: 20px;
+  }
+
+  /* Input and Textarea Styling */
+  .input-field {
+    width: 90%;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-family: inherit;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease-in-out;
+    margin-bottom: 2rem;
+  }
+
+  .input-field:focus {
+    border-color: var(--Boiling-magma);
+    outline: none;
+  }
+
+  /* Button Styling */
+  button {
+    padding: 10px 14px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .submit-button {
+    border: 1px solid var(--Tea-green);
+    color: black;
+    background-color: white;
+  }
+
+  form:invalid button {
+    background-color: #6c757d;
+    color: white;
+    cursor: not-allowed;
+  }
+
+  /* Success and Error Messages */
+  .success-message,
+  .error-message {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 4px;
+  }
+
+  .success-message {
+    color: #116a26;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+  }
+
+  .error-message {
+    color: #981926;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+  }
+
+  /* Aanpassingen voor kleine schermen */
+  @media screen and (max-width: 800px) {
+    section {
+      flex-direction: column;
+    }
+
+    .input-field {
+      width: 100%;
+    }
+  }
 </style>
