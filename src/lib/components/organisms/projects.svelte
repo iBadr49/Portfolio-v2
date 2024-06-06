@@ -18,7 +18,7 @@
     const specificRepos = [
       "visual-thinking",
       "i-love-web-app",
-      "proof-of-concept",
+      "my-first-chatroom",
     ];
     return repos.filter((repo) =>
       specificRepos.includes(repo.name.toLowerCase())
@@ -90,8 +90,7 @@
     <div class="card" data-index="0">
       <div class="card-inner">
         <div class="card-image-container">
-          <img class="card-image" src="images/1.svg" alt="" />
-
+          <img class="card-image" src="images/1.svg" alt="Repository_image" />
           <ul>
             <li>⭐ {repo.stargazers_count}</li>
             <li>👁️ {repo.watchers_count}</li>
@@ -99,23 +98,16 @@
             <li>💻 {repo.language}</li>
           </ul>
         </div>
-
         <div class="card-content">
-          <h3 class="card-title">
-            {repo.name}
-          </h3>
-
-
+          <h3 class="card-title">{repo.name}</h3>
           <p class="card-description">
             {repo.description || "No description available."}
           </p>
-          <p>
-            <a href={repo.homepage} target="_blank"> Website </a>
-          </p>
-
-          <p><a href={repo.html_url} target="_blank"> GitHub</a></p>
+          <div class="card-links">
+            <a href={repo.homepage} target="_blank">Website</a>
+            <a href={repo.html_url} target="_blank">GitHub</a>
+          </div>
         </div>
-        
       </div>
     </div>
   {/each}
@@ -134,6 +126,31 @@
     text-decoration: underline var(--Tea-green);
     font-size: 3rem;
     color: var(--Boiling-magma);
+  }
+
+  a {
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    color: black;
+    text-transform: uppercase;
+    font-size: larger;
+    border: 1px solid var(--Tea-green);
+    border-radius: 0.5rem;
+    box-shadow: -2px 2px 0 0 var(--Tea-green);
+    transition: 0.4s ease-out;
+    cursor: pointer;
+  }
+
+
+  a:hover {
+    transform: translate(-1px 1px);
+    box-shadow: -1px 1px 0 0 var(--Tea-green);
+  }
+
+  .card-links {
+    display: flex;
+    gap: 10px; /* Adjust gap as needed */
+    padding-top: 10px;
   }
 
   .card-inner {
