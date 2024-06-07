@@ -133,7 +133,7 @@
   .input-field {
     width: 90%;
     padding: 8px 12px;
-    font-size: 12px;
+    font-size: 16px;
     font-family: inherit;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -146,22 +146,25 @@
     outline: none;
   }
 
-  /* Button Styling */
-  button {
-    padding: 10px 14px;
-    font-size: 14px;
+  .submit-button {
+    font-family: inherit;
+    background-color: white;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    width: 7rem;
     font-weight: bold;
-    text-align: center;
-    border: none;
-    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: larger;
+    border: 1px solid var(--Tea-green);
+    border-radius: 0.5rem;
+    box-shadow: -2px 2px 0 0 var(--Tea-green);
+    transition: 0.4s ease-out;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
   }
 
-  .submit-button {
-    border: 1px solid var(--Tea-green);
-    color: black;
-    background-color: white;
+  .submit-button:hover {
+    transform: translate(-1px 1px);
+    box-shadow: -1px 1px 0 0 var(--Tea-green);
   }
 
   form:invalid button {
@@ -173,6 +176,7 @@
   /* Success and Error Messages */
   .success-message,
   .error-message {
+    width: 90%;
     font-size: 14px;
     font-weight: bold;
     padding: 8px;
@@ -182,13 +186,11 @@
   .success-message {
     color: #116a26;
     background-color: #d4edda;
-    border-color: #c3e6cb;
   }
 
   .error-message {
     color: #981926;
     background-color: #f8d7da;
-    border-color: #f5c6cb;
   }
 
   /* Aanpassingen voor kleine schermen */
