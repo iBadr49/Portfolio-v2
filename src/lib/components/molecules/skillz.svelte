@@ -10,7 +10,8 @@
         { name: "CSS", level: "Experienced" },
         { name: "JavaScript", level: "Basic" },
         { name: "Sveltekit", level: "Experienced" },
-        { name: "Nuxt", level: "Basic" },
+        { name: "Nuxt", level: "Intermediate" },
+        { name: "Vue", level: "Intermediate" },
       ],
     },
     {
@@ -72,16 +73,17 @@
     padding: 1.5rem;
     background: white;
     border-radius: 2rem;
-    /* border: 2px solid var(--Tea-green); */
-    /* box-shadow: 0 1px 2px rgb(163, 163, 163); */
     box-shadow: 0 25px 50px -12px hsla(265.3, 20%, 10%, 35%);
     max-width: 50%;
+  }
 
-    /* border: 0.1rem solid rgb(163, 163, 163);  */
+  div p {
+    color: gray;
+    font-size: 16px;
   }
 
   .subtitle {
-    color: rgb(85, 85, 85);
+    /* color: rgb(68, 68, 68); */
     font-weight: 600;
     font-size: 1.75rem;
     margin-bottom: 2rem;
@@ -135,6 +137,5 @@
     .experience {
       max-width: 100%;
     }
-  
   }
 </style>
