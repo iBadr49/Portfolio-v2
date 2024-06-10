@@ -142,7 +142,7 @@
   }
 
   .input-field:focus {
-    border-color: var(--Boiling-magma);
+    border-color: var(--Tea-green);
     outline: none;
   }
 
