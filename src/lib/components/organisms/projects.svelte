@@ -18,12 +18,19 @@
     const specificRepos = [
       "visual-thinking",
       "i-love-web-app",
-      "my-first-chatroom",
+      "buurtcampus-web",
     ];
     return repos.filter((repo) =>
       specificRepos.includes(repo.name.toLowerCase())
     );
   }
+
+  // Object to map repo names to image URLs
+  const repoImages = {
+    "visual-thinking": "images/visualthinking.school.png",
+    "i-love-web-app": "images/iloveweb.png",
+    "buurtcampus-web": "images/buurtcampus.png"
+  };
 
   onMount(async () => {
     // Fetch and set repositories
@@ -90,13 +97,13 @@
     <div class="card" data-index="0">
       <div class="card-inner">
         <div class="card-image-container">
-          <img class="card-image" src="images/1.svg" alt="Repository_image" />
-          <ul>
+          <img class="card-image" src={repoImages[repo.name.toLowerCase()]} alt="Repository_image" />
+          <!-- <ul>
             <li>⭐ {repo.stargazers_count}</li>
             <li>👁️ {repo.watchers_count}</li>
-            <!-- <li>🍴 {repo.forks_count} |</li> -->
+            <li>🍴 {repo.forks_count} |</li>
             <li>💻 {repo.language}</li>
-          </ul>
+          </ul> -->
         </div>
         <div class="card-content">
           <h3 class="card-title">{repo.name}</h3>
@@ -125,6 +132,7 @@
     margin-bottom: 1.5rem;
     text-decoration: underline var(--Tea-green);
     font-size: 3rem;
+    padding: 0 0 0 20px;
     color: var(--Boiling-magma);
   }
 
@@ -156,15 +164,11 @@
   .card-inner {
     will-change: transform;
     background: white;
-    border-radius: 20px;
+    border-radius: 8px;
     display: flex;
     overflow: hidden;
     box-shadow: 0 25px 50px -12px hsla(265.3, 20%, 10%, 35%);
     transform-origin: center top;
-  }
-
-  h2 {
-    padding: 0 0 0 20px;
   }
 
   .cards {
@@ -180,29 +184,31 @@
   .card-image-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 40%;
     flex-shrink: 0;
     align-items: center;
   }
 
-  ul {
+  /* ul {
     list-style: none;
     padding: 10px;
     display: flex;
     gap: 10px;
     font-size: 20px;
     color: #16263a;
-  }
+  } */
 
   a {
     text-decoration: none;
   }
 
   .card-image {
-    width: 70%;
-    height: 70%;
-    object-fit: cover;
-    aspect-ratio: 1;
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    padding: 10px;
+    /* aspect-ratio: 1; */
   }
 
   .card-content {
@@ -225,7 +231,7 @@
     height: 100px;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     .card-inner {
       flex-direction: column;
     }
