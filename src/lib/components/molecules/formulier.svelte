@@ -23,7 +23,7 @@
   }
 </script>
 
-<h2>Contact Me</h2>
+<h2 id="lets-talk">Contact Me</h2>
 <section>
   <Contact />
   <form
@@ -84,9 +84,8 @@
 <style>
   h2 {
     font-size: 3rem;
-    margin-bottom: 1.5rem;
     color: var(--Boiling-magma);
-    padding-left: 20px;
+    padding: 20px;
     text-decoration: underline var(--Tea-green);
   }
 

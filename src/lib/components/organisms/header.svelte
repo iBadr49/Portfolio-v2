@@ -7,9 +7,9 @@
 
   <nav>
     <ul>
-      <li><a href="/">About</a></li>
-      <li><a href="/">My work</a></li>
-      <li class="last-item"><a href="/">Let's Talk</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#my-work">My work</a></li>
+      <li class="last-item"><a href="#lets-talk">Let's Talk</a></li>
     </ul>
   </nav>
 </header>

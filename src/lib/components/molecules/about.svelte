@@ -3,7 +3,7 @@
     <img src="images/1.svg" alt="my_apple_moji" />
   </div>
   <div class="text-content">
-    <h2>About</h2>
+    <h2 id="about">About</h2>
     <p>
       I'm a Frontend Design and Development student based in Amsterdam, the
       Netherlands. I strive to independently design and develop complex yet
@@ -17,8 +17,8 @@
     </p>
 
     <div class="button-group">
-      <a href="/" class="work-button">See my work</a>
-      <a href="/" class="contact-button">Contact Me</a>
+      <!-- <a href="/" class="work-button">See my work</a> -->
+      <a href="#lets-talk" class="contact-button">Contact Me</a>
     </div>
   </div>
 </section>
